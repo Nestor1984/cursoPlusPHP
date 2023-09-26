@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select y checkbox multiples en formularios php</title>
+</head>
+<body>
+    <p>Para enviar varios datos debes seguir la siguiente instruccion: ctrl + click sobre las opciones</p>
+    
+    <form action="13-SelectYCheckbox.php" method="post"> <!-- method="get" -->
+        
+        <!--El atributo booleano multiple: si se establece, significa que el control del formulario acepta uno o más valores. -->
+        <h2>Select multiple</h2>
+        <label for="asignatura">Asignatura</label>
+        <select id="asignatura" name="asignatura[]" multiple> <!--name="asignatura[]": Aqui estamos diciendo que va ser un array-->
+            <option value="Ingles">Ingles</option>
+            <option value="Matematicas">Matematicas</option>
+            <option value="Ciencia">Ciencia</option>
+            <option value="Lenguaje">Lenguaje</option>
+        </select>
+
+        <br><br>
+
+        <h2>Checkbox multiple</h2>
+        <label for="opcion-1">
+            <input type="checkbox" value="Manzana" id="opcion-1" name="frutas[]">
+            Manzana
+        </label>
+
+        <label for="opcion-2">
+            <input type="checkbox" value="Fresa" id="opcion-2" name="frutas[]"> <!--Value: es el valor que se envia cuando se envia el formulario-->
+            Fresa
+        </label>
+
+        <label for="opcion-3">
+            <input type="checkbox" value="Uva" id="opcion-3" name="frutas[]">
+            Uva
+        </label>
+
+        <br><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
